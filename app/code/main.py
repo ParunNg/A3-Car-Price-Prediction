@@ -135,7 +135,7 @@ def calculate_selling_price(max_power, year, fuel, brand, submit):
     X, features = get_X(max_power, year, fuel, brand)
     y = get_y(X)[0]
 
-    return [f"Selling price is: {y_map[y]}"] + list(features.values())
+    return [f"Selling price is: {5}"] + list(features.values())
 
 # Run the app
 if __name__ == '__main__':
