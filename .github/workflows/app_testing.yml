@@ -1,0 +1,19 @@
+name: App Testing
+
+on: push 
+
+jobs:
+  unit-testing:
+    runs-on: ubuntu-latest 
+    
+    steps:
+      uses : actions/checkout@v2
+
+    - name : Change Directory
+      working-directory: ./app/code
+      
+    - name : Install Dependencies
+      run : pip install -r requirements.txt
+      
+    - name : Run Tests
+      run : pytest

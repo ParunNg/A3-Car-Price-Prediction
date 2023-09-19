@@ -10,6 +10,7 @@ RUN pip3 install dash
 RUN pip3 install dash[testing]
 RUN pip3 install dash_bootstrap_components
 RUN pip3 install mlflow
+RUN pip3 install pytest
 
 COPY ./code /root/code
 
