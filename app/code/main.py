@@ -28,7 +28,7 @@ num_cols = ['max_power', 'year']
 # default values are medians for numerical features and modes for categorical features
 default_vals = {'max_power': 82.4, 'year': 2015, 'fuel': 'Diesel', 'brand': 'Maruti'}
 # map value of y to String representation
-y_map = {0: 'low', 1: 'medium', 2: 'high', 3: 'very high'}
+y_map = {0: 'cheap', 1: 'average', 2: 'expensive', 3: 'very expensive'}
 
 # Create function for one-hot encoding a feature in dataframe 
 def one_hot_transform(encoder, dataframe, feature):

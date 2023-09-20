@@ -2,7 +2,7 @@ import numpy as np
 from main import get_X, get_y, calculate_selling_price
 
 feature_vals = [82.4, 2015, 'Diesel', 'Maruti']
-labels = ['low', 'medium', 'high', 'very high']
+labels = ['cheap', 'average', 'expensive', 'very expensive']
 possible_outputs = [f"Selling price is: {label}" for label in labels]
 
 def test_get_Xy():
