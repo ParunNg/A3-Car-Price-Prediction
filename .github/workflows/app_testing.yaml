@@ -29,7 +29,7 @@ jobs:
         with:
           envkey_MLFLOW_TRACKING_URI: ${{ secrets.MLFLOW_TRACKING_URI }}
           envkey_APP_MODEL_NAME: ${{ secrets.APP_MODEL_NAME }}
-          file_name: .env
+          file_name: ./app/.env
           fail_on_empty: true
           sort_keys: true
       - name: Build the Docker image
