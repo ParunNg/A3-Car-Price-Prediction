@@ -61,7 +61,7 @@ app.layout = dbc.Container([
         html.P("If you want to try out our nifty little tool, simply fill in the car max power (BHP), select the car manufacture year, \
                the fuel type that the car uses (currently we only supports diesel and petrol) and the car brand in the form below. \
                Once done, click on the \"calculate selling price\" button and voila! The suitable price range of the car will be shown below, \
-               highlighted in blue. ")
+               highlighted in blue.")
     ],
     style={"margin":'30px', "margin-bottom":'20px', "display":'inline-block'}),
 
