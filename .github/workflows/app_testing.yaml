@@ -8,11 +8,7 @@ run-name: ${{ github.actor }} Building and Testing
 on:
   push:
     tags:
-<<<<<<< HEAD
       - 'a3*'
-=======
-      - 'v*'
->>>>>>> parent of 23a64f4 (Update app_testing.yaml)
 # There can be multiple jobs
 jobs:
   # Job name
