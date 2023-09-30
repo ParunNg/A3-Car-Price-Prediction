@@ -1,5 +1,6 @@
 # Import packages
 from dash import Dash, dcc, html, callback, Output, Input, State
+import os
 import numpy as np
 import pandas as pd
 import pickle
@@ -11,8 +12,8 @@ external_stylesheets = [dbc.themes.LUX]
 app = Dash(__name__, external_stylesheets=external_stylesheets)
 
 # Model name and version from designated mlflow server
-mlflow.set_tracking_uri("https://mlflow.cs.ait.ac.th/")
-model_name = "st124026-a3-model"
+mlflow.set_tracking_uri(os.environ['MLFLOW_TRACKING_URI'])
+model_name = os.environ['APP_MODEL_NAME']
 model_version = 1
 
 # paths of all components for car price predictions
