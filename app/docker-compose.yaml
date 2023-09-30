@@ -13,5 +13,3 @@ services:
     environment:
       - HOST=0.0.0.0
       - PORT=80
-    env_file:
-      - .env

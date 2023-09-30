@@ -6,6 +6,8 @@ services:
     environment:
       - HOST=0.0.0.0
       - PORT=80
+    env_file:
+      - .env
     # This is important for asking Traefik to use your container.
     labels:
       # Allow Traefik to talk with your service
@@ -14,7 +16,7 @@ services:
       - traefik.http.services.python-st124026.loadbalancer.server.port=80
       # This config you domain name. By default, your subdomain is python-st124026
       # If you which to change the subdomain name, you uncomment the below configuration
-      - traefik.http.routers.python-st124026.rule=Host(`a2.st124026.ml2023.cs.ait.ac.th`)
+      - traefik.http.routers.python-st124026.rule=Host(`a3.st124026.ml2023.cs.ait.ac.th`)
       # Below is for enable SSL.
       - traefik.http.routers.python-st124026.tls=true
       - traefik.http.routers.python-st124026.tls.certresolver=production
