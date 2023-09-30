@@ -3,20 +3,25 @@ from dash import Dash, dcc, html, callback, Output, Input, State
 import numpy as np
 import pandas as pd
 import pickle
+import mlflow
 import dash_bootstrap_components as dbc
 
 # Initialize the app - incorporate a Dash Bootstrap theme
 external_stylesheets = [dbc.themes.LUX]
 app = Dash(__name__, external_stylesheets=external_stylesheets)
 
+# Model name and version from designated mlflow server
+mlflow.set_tracking_uri("https://mlflow.cs.ait.ac.th/")
+model_name = "st124026-a3-model"
+model_version = 1
+
 # paths of all components for car price predictions
-model_path = "model/model.pkl"
 scaler_path = 'preprocess/scaler.prep'
 fuel_enc_path = 'preprocess/fuel_encoder.prep'
 brand_enc_path = "preprocess/brand_encoder.prep"
 
 # load all components
-model = pickle.load(open(model_path, 'rb'))
+model = mlflow.pyfunc.load_model(model_uri=f"models:/{model_name}/{model_version}")
 scaler = pickle.load(open(scaler_path, 'rb'))
 fuel_le = pickle.load(open(fuel_enc_path, 'rb'))
 brand_ohe = pickle.load(open(brand_enc_path, 'rb'))
