@@ -11,4 +11,4 @@ Car price prediction tool provides the means for users to input the car specific
  3. Switch to Docker view in yor VS Code and right click on 'parunng/car_price_prediction:a3' image inside the 'app' container then select 'Attach Visual Studio Code'. A new window of VS Code will pop up.
  4. Finally, run the script 'main.py' inside the '/root/code' folder, the application of car price prediction tool will run on http://127.0.0.1:8001/
 
-Alternatively, you can visit our website at a2.st124026.ml2023.cs.ait.ac.th in order to access our prediction tool directly from the internet.
+Alternatively, you can visit our website at a3.st124026.ml2023.cs.ait.ac.th in order to access our prediction tool directly from the internet.
