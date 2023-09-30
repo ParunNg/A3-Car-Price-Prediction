@@ -8,7 +8,7 @@ run-name: ${{ github.actor }} Building and Testing
 on:
   push:
     tags:
-      - 'v*'
+      - 'a*'
 # There can be multiple jobs
 jobs:
   # Job name
@@ -53,7 +53,7 @@ jobs:
         with:
           # Your image name
           images: parunng/car_price_prediction
-          tags: type=semver,pattern={{raw}}
+          tags: ${{ github.ref_name }}
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
