@@ -8,7 +8,11 @@ run-name: ${{ github.actor }} Building and Testing
 on:
   push:
     tags:
-      - 'a*'
+<<<<<<< HEAD
+      - 'a3*'
+=======
+      - 'v*'
+>>>>>>> parent of 23a64f4 (Update app_testing.yaml)
 # There can be multiple jobs
 jobs:
   # Job name
@@ -53,7 +57,7 @@ jobs:
         with:
           # Your image name
           images: parunng/car_price_prediction
-          tags: ${{ github.ref_name }}
+          tags: type=semver,pattern={{raw}}
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
