@@ -2,7 +2,7 @@
 
 ### Description:
 
-Car price prediction tool provides the means for users to input the car specifications such as car max power (BHP), manufacture year, fuel type and brand in order to find the best selling price range of the car (low, medium, high, very high). Our tool uses Logistic Regression model with accuracy of 77.2% for the predictions.
+Car price prediction tool provides the means for users to input the car specifications such as car max power (BHP), manufacture year, fuel type and brand in order to find the best selling price range of the car (cheap, average, expensive, very expensive). Our tool uses Logistic Regression model with accuracy of 77.2% for the predictions.
 
  ### How to use:
 
